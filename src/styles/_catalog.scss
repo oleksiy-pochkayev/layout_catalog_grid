@@ -1,12 +1,20 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-
   max-width: 944px;
   margin: 0 auto;
 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: 489px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 769px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     width: 200px;
